@@ -1,0 +1,35 @@
+@import './variables.scss';
+
+.content {
+  padding: 50px 100px 75px;
+  min-height: calc(100vh - 270px);
+
+  &__part {
+    padding-top: 53px;    
+  }
+
+  &__point {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+    background-color: $highlight-green;
+    margin-right: 15px;
+  
+    &-text {
+      text-align: center;
+      line-height: 40px;
+    }
+  }
+  
+  &__header {
+    display: inline;
+    vertical-align: middle;
+    color: $text-grey-dark;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,170 @@
+@import './variables.scss';
+
+.files {
+
+  &__rows {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  &__columns {
+    padding: 0 55px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+  }
+
+  &__column {
+    flex: 1;
+
+    &:last-child {
+      margin-left: 30px;
+    }
+  }
+
+  &__action-description {
+    font-weight: lighter;
+    font-size: 18px;
+    color: $text-grey-dark;
+  }
+
+  &__loaded-files {
+    margin-top: 50px;
+    padding: 0 55px;
+
+    .files__action-description {
+      font-size: 16px;
+    }
+  }
+
+  &__separator {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 25px);
+    background-color: #fff;
+    border: 1px solid #e0e6ed;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: lighter;
+    color: $text-grey-dark;
+    box-shadow: 0px 1px 5px 0px rgba(31, 45, 61, 0.05);
+  }
+
+  &__file {
+    height: 70px;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e6ed;
+    padding: 0 30px 0 20px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+
+    &:first-child {
+      border-radius: 6px 6px 0 0 !important;
+    }
+    &:last-child {
+      border-radius: 0 0 6px 6px;
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: $grey-light;
+    }
+
+    img {
+      width: 33px;
+      margin-right: 25px;
+    }
+
+    &-name,
+    &-size {
+      margin: 0;
+    }
+
+    &-name {
+      font-size: 16px;
+      color: $text-grey-dark;
+      margin-bottom: 6px;
+    }
+
+    &-size,
+    &-date {
+      color: #999;
+      font-size: 14px;
+    }
+
+    &-date {
+      align-self: flex-end;
+      margin-bottom: 15px;
+      margin-left: auto;
+    }
+  }
+
+  &__checkbox {
+    margin-right: 20px;
+
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    input:checked ~ .files__checkmark {
+      background-color: $highlight-blue;
+      border: 1px solid $highlight-blue;
+    }
+
+    input:checked ~ .files__checkmark:after {
+      display: block;
+    }
+  }
+
+  &__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border: 1px solid #e0e6ed;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: #e0e6ed;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    &:after {
+      left: 7px;
+      top: 3px;
+      width: 5px;
+      height: 11px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+  }
+
+
+
+}

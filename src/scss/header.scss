@@ -1,0 +1,54 @@
+@import './variables.scss';
+
+.header {
+  width: 100vw;
+  box-sizing: border-box;
+  height: 90px;
+  padding: 0 55px;
+  display: flex;
+  background-color: $bg-white;
+  color: $text-grey-dark;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 50px;
+      margin-right: 20px;
+    }
+
+    &-text {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+  
+  &__account {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+    &-name {
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+  &__avatar {
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+
+  &__dropdown {
+
+    &-toggler {
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  }
+
+}
+

@@ -1,0 +1,80 @@
+@import './variables.scss';
+
+.operations {
+  padding: 15px 55px;
+  display: flex;
+
+  &__operation {
+    display: block;
+    flex: 1;
+    height: 122px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 1px 5px 0px rgba(31, 45, 61, 0.05);
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #fbfbfd;
+    }
+  }
+
+  &__icon,
+  &__icon-active {
+    display: block;
+    margin: 28px auto 0;
+  }
+  &__icon-active {
+    display: none;
+  }
+
+  &__operation-active {
+    background-color: $highlight-blue;
+    
+    .operations__icon {
+      display: none;
+    }
+    
+    .operations__icon-active {
+      display: block;
+    }
+    
+    .operations__name {
+      color: #fff;
+    }
+
+    &:hover {
+      background-color: $highlight-blue;
+    }
+  }
+
+  &__operation + &__operation {
+    margin-left: 30px;
+  }
+
+  &__name {
+    font-size: 16px;
+    color: $text-grey-dark;
+    margin-top: 10px;
+  }
+
+  &__sign {
+    padding: 15px 55px 0;
+    display: flex;
+
+    &-type {
+
+      &-header {
+        margin-bottom: 12px;
+        font-size: 17px;
+        color: $text-grey-dark;
+      }
+
+      &-description {
+        margin-top: 0;
+        font-size: 14px;
+        color: $text-grey-dark;
+      }
+    }
+  }
+}

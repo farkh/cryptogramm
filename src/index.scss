@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+
+@import './scss/variables.scss';
+
+@import './scss/header.scss';
+@import './scss/content.scss';
+@import './scss/files.scss';
+@import './scss/dragndrop.scss';
+@import './scss/files-list.scss';
+@import './scss/operations.scss';
+@import './scss/dropdown.scss';
+@import './scss/footer.scss';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $bg-grey;
+}
+
+.g--link {
+  color: $highlight-blue;
+  cursor: pointer;
+}
+
+.checkbox {
+  position: relative;
+  margin: 0 25px;
+  padding-top: 15px;
+  min-width: 65px;
+
+  &__circle {
+    position: absolute;
+    left: -2px;
+    top: 9px;
+    cursor: pointer;
+    transition: all .15s ease-in;
+
+    &.active {
+      left: 32px;
+    }
+  }
+}
+
+.primary-button {
+  width: 234px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: $highlight-green;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 300;
+  margin-left: 55px;
+  margin-top: 60px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #09be59;
+  }
+}
+

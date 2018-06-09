@@ -1,0 +1,21 @@
+@import './variables.scss';
+
+.footer {
+  width: 100vw;
+  box-sizing: border-box;
+  height: 90px;
+  padding: 0 55px;
+  display: flex;
+  align-items: center;
+  background-color: $bg-white;
+
+  &__logo {
+    width: 100px;
+    margin-right: 20px;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    color: $text-grey;
+  }
+}

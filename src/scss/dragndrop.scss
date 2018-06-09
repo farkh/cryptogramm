@@ -1,0 +1,41 @@
+@import './variables.scss';
+
+.files {
+
+  &__dragndrop {
+    height: 280px;
+    box-sizing: border-box;
+    background-color: $grey-light;
+    border: 2px dashed $grey-light-border;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  &__dragndrop-active {
+    background-color: $blue-light-active;
+    border-color: $blue-light-border;
+    
+    .files__upload-icon {
+      display: none;
+    }
+    .files__upload-active-icon {
+      display: block;
+    }
+  }
+
+  &__upload-icon,
+  &__upload-active-icon {
+    margin: 80px auto 0;
+    display: block;
+  }
+  &__upload-active-icon {
+    display: none;
+  }
+
+  &__upload-description {
+    margin: 25px auto;
+    text-align: center;
+    color: $text-grey-description;
+  }
+}
+
